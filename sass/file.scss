@@ -17,6 +17,22 @@ html{
     width: 100%;
     height: 100%;
 }
+@mixin btn {
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    padding: 0.3em 0.8em;
+    color: white;
+    letter-spacing: 0.2rem;
+    border-radius: 0.5rem;
+    border: 1px solid white;
+    @include tran;
+    &:hover{
+        letter-spacing: 0.5rem;
+    }
+
+}
 
 @mixin  tran {
     transition: all 0.3s ease-in-out;
@@ -50,6 +66,9 @@ html{
             &:hover{
                 color: white;
                 border-bottom: 1px solid white;
+            }
+            &:focus{
+                color: white;
             }
         }
     }
@@ -101,6 +120,7 @@ html{
             }
         }
         p{
+            margin-bottom: 2rem;
             font-size: 1.5rem;
             font-size: 200;
             text-transform: capitalize;
@@ -109,6 +129,12 @@ html{
             animation-delay: 1s;
             letter-spacing: 0.2rem;
         }
+        .sbtn{
+            @include btn;
+            @include ani;
+            animation-delay: 2s;
+        }
+
         #t1{
             top: -50px;
         }
@@ -122,5 +148,78 @@ html{
             transform: translateX(200px);
         }
     }
+    
+}
+
+.card-content{
+    padding: 5rem 0;
+
+    .logo-btn{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        i{
+            font-size: 5rem;
+            margin: 0 2rem;
+            @include tran;
+        }
+
+        #lg1{
+
+            &:hover{
+                color: rgb(94, 94, 94);
+            }
+            
+        }
+        #lg2{
+            &:hover{
+                color: rgb(28, 28, 136);
+            }
+            
+        }
+        #lg3{
+            &:hover{
+                color: rgb(20, 170, 20);
+            }
+            
+        }
+
+    }
+    .container{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 5rem;
+
+        .card{
+            position: relative;
+            width: 80%;
+            height: 30rem;
+            border: 2px solid red;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 3rem 0;
+            @include tran;
+
+            &:hover{
+                height: 40rem;
+            }
+
+            .img-box{
+                width: 70%;
+                min-height: 30rem;
+                position: relative;
+                border: 2px solid blue;
+                top: -5rem;
+            }
+            .img-con{
+                position: absolute;
+                bottom: 20%;
+            }
+        }
+    }
+
     
 }
