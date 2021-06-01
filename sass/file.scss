@@ -161,7 +161,7 @@ html{
 
         i{
             font-size: 5rem;
-            margin: 0 2rem;
+            margin: 0 2rem 2rem 2rem;
             @include tran;
         }
 
@@ -191,32 +191,63 @@ html{
         flex-direction: row;
         justify-content: center;
         margin-top: 5rem;
+        border-color:white;
+        outline: white;
 
         .card{
             position: relative;
             width: 80%;
             height: 30rem;
-            border: 2px solid red;
+            // border: 2px solid red;
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin: 3rem 0;
-            @include tran;
+            margin: 5rem 0;
+            background: white;
+            box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 
-            &:hover{
-                height: 40rem;
+            &:hover .img-box{
+                top: -15rem;
+            }
+
+            &:hover .img-con{
+                opacity: 1;
             }
 
             .img-box{
+                @include tran;
                 width: 70%;
                 min-height: 30rem;
                 position: relative;
-                border: 2px solid blue;
                 top: -5rem;
+                box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+                z-index: 99;
+
+                img{
+                    @include image;
+                }
             }
             .img-con{
                 position: absolute;
-                bottom: 20%;
+                bottom: 15%;
+                text-align: center;
+                opacity: 0;
+                @include tran;
+                transition-delay:0.3s ;
+
+                a{
+                    @include btn;
+                    border-width: 2px;
+                    color: white;
+                    background: rgb(10, 125, 202);
+                }
+
+                h2{
+                    font-size: 3rem;
+                    text-transform: capitalize;
+                    font-weight: 400;
+                    margin-top: 0.5rem;
+                }
             }
         }
     }

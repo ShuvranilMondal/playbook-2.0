@@ -182,7 +182,7 @@ html {
 
 .card-content .logo-btn i {
   font-size: 5rem;
-  margin: 0 2rem;
+  margin: 0 2rem 2rem 2rem;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
@@ -211,13 +211,14 @@ html {
       -ms-flex-pack: center;
           justify-content: center;
   margin-top: 5rem;
+  border-color: white;
+  outline: white;
 }
 
 .card-content .container .card {
   position: relative;
   width: 80%;
   height: 30rem;
-  border: 2px solid red;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -228,25 +229,77 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 3rem 0;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  margin: 5rem 0;
+  background: white;
+  -webkit-box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+          box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
-.card-content .container .card:hover {
-  height: 40rem;
+.card-content .container .card:hover .img-box {
+  top: -15rem;
+}
+
+.card-content .container .card:hover .img-con {
+  opacity: 1;
 }
 
 .card-content .container .card .img-box {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   width: 70%;
   min-height: 30rem;
   position: relative;
-  border: 2px solid blue;
   top: -5rem;
+  -webkit-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+          box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  z-index: 99;
+}
+
+.card-content .container .card .img-box img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  width: 100%;
+  height: 100%;
 }
 
 .card-content .container .card .img-con {
   position: absolute;
-  bottom: 20%;
+  bottom: 15%;
+  text-align: center;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+}
+
+.card-content .container .card .img-con a {
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  padding: 0.3em 0.8em;
+  color: white;
+  letter-spacing: 0.2rem;
+  border-radius: 0.5rem;
+  border: 1px solid white;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  border-width: 2px;
+  color: white;
+  background: #0a7dca;
+}
+
+.card-content .container .card .img-con a:hover {
+  letter-spacing: 0.5rem;
+}
+
+.card-content .container .card .img-con h2 {
+  font-size: 3rem;
+  text-transform: capitalize;
+  font-weight: 400;
+  margin-top: 0.5rem;
 }
 /*# sourceMappingURL=file.css.map */
