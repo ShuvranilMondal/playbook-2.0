@@ -11,9 +11,18 @@ html {
   font-family: 'Poppins', sans-serif;
 }
 
+body {
+  position: relative;
+}
+
 .navbar-light button.navbar-toggler {
   color: white;
   border-color: white;
+}
+
+.navbar {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .navbar i {
@@ -301,5 +310,43 @@ html {
   text-transform: capitalize;
   font-weight: 400;
   margin-top: 0.5rem;
+}
+
+#home-btn {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  font-size: 2rem;
+  color: white;
+  background: black;
+  padding: .5em .7em;
+  border-radius: 50%;
+  position: fixed;
+  right: 2rem;
+  bottom: 4rem;
+  z-index: 9999;
+  -webkit-animation: home 2s ease-in-out forwards infinite;
+          animation: home 2s ease-in-out forwards infinite;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  opacity: 0;
+}
+
+@-webkit-keyframes home {
+  50% {
+    bottom: 6rem;
+  }
+  100% {
+    bottom: 4rem;
+  }
+}
+
+@keyframes home {
+  50% {
+    bottom: 6rem;
+  }
+  100% {
+    bottom: 4rem;
+  }
 }
 /*# sourceMappingURL=file.css.map */

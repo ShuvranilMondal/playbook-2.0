@@ -11,6 +11,10 @@ html{
     font-family: 'Poppins', sans-serif;
 }
 
+body{
+    position: relative;
+}
+
 @mixin image {
     object-fit: cover;
     object-position: center;
@@ -48,7 +52,7 @@ html{
 }
 
 .navbar{
-    // background-color: rgba(0, 0, 0, 0.445);
+    @include tran;
 
     i{
         font-size: 3rem;
@@ -250,7 +254,30 @@ html{
                 }
             }
         }
-    }
+    }    
+}
 
-    
+#home-btn{
+    @include tran;
+    text-decoration: none;
+    font-size: 2rem;
+    color: white;
+    background: black;
+    padding: .5em .7em;
+    border-radius: 50%;
+    position: fixed;
+    right: 2rem;
+    bottom: 4rem;
+    z-index: 9999;
+    animation: home 2s ease-in-out forwards infinite;
+    animation-delay: 2s;
+    opacity: 0;
+}
+@keyframes home {
+    50%{
+        bottom: 6rem;
+    }
+    100%{
+        bottom: 4rem;
+    }
 }
