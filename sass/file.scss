@@ -22,6 +22,10 @@ html{
     transition: all 0.3s ease-in-out;
 }
 
+@mixin ani {
+    animation: text 1.5s ease-in forwards;
+    opacity: 0;
+}
 .navbar-light button.navbar-toggler{
     color:white;
     border-color: white;
@@ -44,7 +48,8 @@ html{
             letter-spacing: 0.5rem;
 
             &:hover{
-                color: gray;
+                color: white;
+                border-bottom: 1px solid white;
             }
         }
     }
@@ -84,21 +89,37 @@ html{
             font-size: 6rem;
             font-weight: 300;
             text-transform: capitalize;
-            top: -50px;
             @include tran;
-            opacity: 0;
-            animation: text 1.5s ease-in forwards;
+            @include ani;
+            letter-spacing: 0.2rem;
         }
         @keyframes text {
             100%{
                 top: 0px;
                 opacity: 1;
+                transform: translateX(0);
             }
         }
         p{
             font-size: 1.5rem;
             font-size: 200;
             text-transform: capitalize;
+            @include ani;
+            @include tran;
+            animation-delay: 1s;
+            letter-spacing: 0.2rem;
+        }
+        #t1{
+            top: -50px;
+        }
+        #p1,#t3{
+            transform: translateX(-200px);
+        }
+        #p2{
+            transform: translateY(-20px);
+        }
+        #p3{
+            transform: translateX(200px);
         }
     }
     

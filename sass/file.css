@@ -30,7 +30,8 @@ html {
 }
 
 .navbar .nav-item a.nav-link:hover {
-  color: gray;
+  color: white;
+  border-bottom: 1px solid white;
 }
 
 .carousel-item {
@@ -75,18 +76,20 @@ html {
   font-size: 6rem;
   font-weight: 300;
   text-transform: capitalize;
-  top: -50px;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  opacity: 0;
   -webkit-animation: text 1.5s ease-in forwards;
           animation: text 1.5s ease-in forwards;
+  opacity: 0;
+  letter-spacing: 0.2rem;
 }
 
 @-webkit-keyframes text {
   100% {
     top: 0px;
     opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
 }
 
@@ -94,6 +97,8 @@ html {
   100% {
     top: 0px;
     opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
 }
 
@@ -101,5 +106,32 @@ html {
   font-size: 1.5rem;
   font-size: 200;
   text-transform: capitalize;
+  -webkit-animation: text 1.5s ease-in forwards;
+          animation: text 1.5s ease-in forwards;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  letter-spacing: 0.2rem;
+}
+
+.carousel-item .carousel-caption #t1 {
+  top: -50px;
+}
+
+.carousel-item .carousel-caption #p1, .carousel-item .carousel-caption #t3 {
+  -webkit-transform: translateX(-200px);
+          transform: translateX(-200px);
+}
+
+.carousel-item .carousel-caption #p2 {
+  -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
+}
+
+.carousel-item .carousel-caption #p3 {
+  -webkit-transform: translateX(200px);
+          transform: translateX(200px);
 }
 /*# sourceMappingURL=file.css.map */
