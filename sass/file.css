@@ -15,6 +15,16 @@ body {
   position: relative;
 }
 
+#black {
+  z-index: 99999;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.418);
+}
+
 .navbar-light button.navbar-toggler {
   color: white;
   border-color: white;
@@ -348,5 +358,19 @@ body {
   100% {
     bottom: 4rem;
   }
+}
+
+.list-box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 999999;
+  background: white;
+  width: 90%;
+  height: 90vh;
+  overflow: hidden;
+  overflow-y: scroll;
 }
 /*# sourceMappingURL=file.css.map */
