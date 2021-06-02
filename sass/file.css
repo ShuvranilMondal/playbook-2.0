@@ -22,7 +22,17 @@ body {
   left: 0;
   height: 100%;
   width: 100%;
-  background: rgba(0, 0, 0, 0.418);
+  background: rgba(0, 0, 0, 0.555);
+  visibility: hidden;
+}
+
+#black.active {
+  visibility: visible;
+}
+
+#li-box.active {
+  visibility: visible;
+  top: 50%;
 }
 
 .navbar-light button.navbar-toggler {
@@ -361,8 +371,10 @@ body {
 }
 
 .list-box {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   position: fixed;
-  top: 50%;
+  top: -50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -372,9 +384,13 @@ body {
   height: 90vh;
   overflow: hidden;
   overflow-y: scroll;
+  padding-left: 0.5rem;
+  visibility: hidden;
 }
 
-.list-box .search_box {
+.list-box .list-wrp .search_box {
+  position: -webkit-sticky;
+  position: sticky;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -387,13 +403,17 @@ body {
           flex-direction: row;
   width: 100%;
   height: 50px;
-  margin: 30px 0px;
+  margin-bottom: 30px;
   border-radius: 20px;
   background: white;
-  border: 2px solid black;
+  border: 1px solid black;
 }
 
-.list-box .search_box #se-area {
+.list-box .list-wrp .search_box i {
+  font-size: 2rem;
+}
+
+.list-box .list-wrp .search_box #se-area {
   height: 100%;
   width: 95%;
   outline: none;
@@ -403,7 +423,123 @@ body {
   border: none;
 }
 
-.list-box .search_box i {
-  font-size: 2rem;
+#close-btn {
+  display: inline-block;
+  position: -webkit-sticky;
+  position: sticky;
+  left: 95%;
+  top: 85%;
+  z-index: 999;
+}
+
+#close-btn i {
+  font-size: 4rem;
+}
+
+.movies {
+  min-height: 50vh;
+}
+
+.movies #menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.movies #menu .movie-box {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  width: 150px;
+  height: 200px;
+  list-style: none;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 50px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+          box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.movies #menu .movie-box:hover {
+  -webkit-transform: scale(1.2, 1.2);
+          transform: scale(1.2, 1.2);
+}
+
+.movies #menu .movie-box::after {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  position: absolute;
+  content: '';
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.568);
+  z-index: 99;
+  opacity: 0;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+}
+
+.movies #menu .movie-box:hover::after {
+  opacity: 1;
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+}
+
+.movies #menu .movie-box img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+.movies #menu .movie-box .movie-containet {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 9999;
+  opacity: 0;
+}
+
+.movies #menu .movie-box .movie-containet h4 {
+  color: white;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.movies #menu .movie-box .movie-containet a {
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  padding: 0.3em 0.8em;
+  color: white;
+  letter-spacing: 0.2rem;
+  border-radius: 0.5rem;
+  border: 1px solid white;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  font-size: 1rem;
+}
+
+.movies #menu .movie-box .movie-containet a:hover {
+  letter-spacing: 0.5rem;
+}
+
+.movies #menu .movie-box:hover .movie-containet {
+  opacity: 1;
 }
 /*# sourceMappingURL=file.css.map */
