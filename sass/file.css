@@ -542,4 +542,32 @@ body {
 .movies #menu .movie-box:hover .movie-containet {
   opacity: 1;
 }
+
+.about-f {
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 80rem;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../img/about.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/about.jpg");
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 10rem 0;
+}
+
+.about-f .about-content h1 {
+  font-size: 6rem;
+  color: white;
+  text-transform: capitalize;
+  font-weight: 300;
+  letter-spacing: 0.2rem;
+}
+
+.about-f .about-content P {
+  color: white;
+  text-transform: capitalize;
+  font-size: 1.5rem;
+  letter-spacing: 0.3rem;
+}
 /*# sourceMappingURL=file.css.map */
