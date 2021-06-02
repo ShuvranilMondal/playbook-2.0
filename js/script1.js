@@ -12,16 +12,25 @@ window.addEventListener('scroll',()=>{
 
 let pc = document.getElementById('pc');
 let close = document.getElementById('close-btn');
+let close2 = document.getElementById('close-btn2');
 let menu = document.getElementById('menu');
 let xBox = document.getElementById('x-box');
 let ps = document.getElementById('ps');
 let search = document.getElementById('se-area');
 let li = menu.getElementsByTagName('li');
+let conBtn = document.getElementById("con-btn");
 
 let open=()=>{
     let blackS =document.getElementById('black');
     let liBox = document.getElementById('li-box');
     liBox.classList.toggle('active');
+    blackS.classList.toggle('active');
+}
+
+let open2=()=>{
+    let blackS =document.getElementById('black');
+    let liBox2 = document.getElementById('li-box2');
+    liBox2.classList.toggle('active');
     blackS.classList.toggle('active');
 }
 
@@ -43,4 +52,11 @@ search.addEventListener('keyup',()=>{
 
 close.addEventListener('click',()=>{
     open();
+})
+close2.addEventListener('click',()=>{
+    open2();
+})
+
+conBtn.addEventListener('click',()=>{
+    open2();
 })

@@ -428,7 +428,7 @@ body {
   position: -webkit-sticky;
   position: sticky;
   left: 95%;
-  top: 85%;
+  top: 20%;
   z-index: 999;
 }
 

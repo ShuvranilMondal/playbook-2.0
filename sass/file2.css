@@ -1,1 +1,179 @@
-/* No CSS *//*# sourceMappingURL=file2.css.map */
+#li-box2.active {
+  visibility: visible;
+  top: 50%;
+}
+
+.contect-pop {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  position: fixed;
+  background: white;
+  top: -50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 60%;
+  min-height: 30rem;
+  border-radius: 1rem;
+  z-index: 99999;
+  visibility: hidden;
+}
+
+.contect-pop .pop-box {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contect-pop .pop-box #close-btn2 {
+  display: block;
+  text-decoration: none;
+  position: absolute;
+  right: 10px;
+  top: 5px;
+}
+
+.contect-pop .pop-box #close-btn2 i {
+  font-size: 4rem;
+}
+
+.contect-pop .pop-box .social-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.contect-pop .pop-box .social-logo a {
+  margin: 1rem;
+  text-decoration: none;
+  padding: 0.5em 0.5em;
+  border-radius: 100%;
+}
+
+.contect-pop .pop-box .social-logo a i {
+  font-size: 5rem;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.contect-pop .pop-box .social-logo a:nth-of-type(1) {
+  color: blue;
+}
+
+.contect-pop .pop-box .social-logo a:nth-of-type(1):hover {
+  color: #0000aa;
+}
+
+.contect-pop .pop-box .social-logo a:nth-of-type(2) {
+  color: #ff2600;
+}
+
+.contect-pop .pop-box .social-logo a:nth-of-type(2):hover {
+  color: #c71e00;
+}
+
+.contect-pop .pop-box .social-logo a:nth-of-type(3) {
+  color: #157bdb;
+}
+
+.contect-pop .pop-box .social-logo a:nth-of-type(3):hover {
+  color: #1464af;
+}
+
+.contect-pop .pop-box .down-count {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.contect-pop .pop-box .down-count .download, .contect-pop .pop-box .down-count .user {
+  margin: 2rem;
+}
+
+.contect-pop .pop-box .down-count h2 {
+  font-size: 4rem;
+  color: #0f9684;
+}
+
+.contect-pop .pop-box .down-count h4 {
+  font-size: 2rem;
+  text-transform: capitalize;
+}
+
+@media (max-width: 700px) {
+  html {
+    font-size: 50%;
+  }
+  .navbar .cont {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .navbar .cont ul.navbar-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .navbar .cont ul.navbar-nav .nav-item a {
+    font-size: 2rem;
+  }
+  .carousel-item .carousel-caption {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    left: 50%;
+    padding-top: 0;
+  }
+  .list-box {
+    padding: 0;
+  }
+  #menu {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #close-btn {
+    left: 85%;
+  }
+}
+/*# sourceMappingURL=file2.css.map */
