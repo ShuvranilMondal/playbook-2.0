@@ -3,7 +3,7 @@ A playbook is a static online gaming store like STREM, EPIC game, etc, Fully res
 
 # AOS Libary 🎭
 - JavaScript : <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.0.2/aos.js" integrity="sha512-678bHRnILWQudsPcjDbSoYtwimEk8yPq7BBWeJaFoSHPf7Ob7N7au8M49yY9Wbpmmi0PvDzf3Rca1mbmYQLAxQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-- CSS : <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.0.2/aos.css" integrity="sha512-ksbpl5EUb4HLEKUNItsPMT/Ih6KcISE53GbYOu3xFUVYvTSSX5AJxTI2aigdQm9uNSkSsRMHsSGNKppkt691lw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+- CSS : <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 - <script>AOS.init()</script>
 - Link : https://michalsnik.github.io/aos/
 
