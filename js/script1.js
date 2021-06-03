@@ -46,6 +46,9 @@ let filter=()=>{
     }
 }
 
+
+
+
 search.addEventListener('keyup',()=>{
     filter();
 })
@@ -59,4 +62,24 @@ close2.addEventListener('click',()=>{
 
 conBtn.addEventListener('click',()=>{
     open2();
+    let re = document.querySelectorAll('.re');
+
+    re.forEach((element)=>{
+        element.innerHTML = '0';
+
+        let counter = ()=>{
+            let setVal = +element.getAttribute('data-target');
+            let initialVal = +element.innerHTML;
+            let re = (setVal/100);
+            if(initialVal < setVal){
+                element.innerHTML = Math.round(initialVal+re);
+                setTimeout(counter,10);
+            }else{
+                element.innerHTML = setVal;
+            }
+
+        }
+        counter()
+    })
+
 })
